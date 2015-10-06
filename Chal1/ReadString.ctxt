@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=java.lang.String\ readStringCmd()
+comment1.params=myString
+comment1.target=java.lang.String\ IDtoURL(java.lang.String)
+comment2.params=myString
+comment2.target=java.lang.String\ findLine(java.lang.String)
+comment3.params=myString
+comment3.target=java.lang.String\ findName(java.lang.String)
+numComments=4
