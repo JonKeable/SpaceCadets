@@ -16,7 +16,6 @@ public class GetAnagram
     }
     public String getAna(String myStr)
     {
-       System.out.println("Finding Anagram for: " + myStr);
        URL url = null;
        try 
        {
@@ -48,7 +47,7 @@ public class GetAnagram
                {
                    i=i+1;
                }
-               System.out.println(myLine);
+               //System.out.println(myLine);
            }
            //i = 0;
            //in = new BufferedReader(new InputStreamReader(url.openStream()));
@@ -65,15 +64,15 @@ public class GetAnagram
                {
                    i=i+1;
                }
-               System.out.println(myLine);
+               //System.out.println(myLine);
            }
        }
        catch (IOException ioe)
        {
            System.err.println("Something went wrong trying to read the Webpage");
        }
-       System.out.println(line1);
-       System.out.println(line2);
+       //System.out.println(line1);
+       //System.out.println(line2);
        RandomNumberGen rng = new RandomNumberGen();
        int randInt = rng.getRandomInt(line1, line2) + 2;
        randInt = line1+randInt;
@@ -92,7 +91,7 @@ public class GetAnagram
        {
            System.err.println("Something went wrong trying to read the Webpage");
        }
-       System.out.println(chosenLine);
+       //System.out.println(chosenLine);
        myStr = chosenLine.substring(0, chosenLine.indexOf("<"));
        return myStr;   
     }

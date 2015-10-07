@@ -16,6 +16,7 @@ public class AnagramFetcher
         System.out.println("Welcome to Anagram Maker");
         System.out.println("please enter the text you want to turn into an anagram");
         myStr =  br.readStringCmd();
+        System.out.println("Finding Anagram for: " + myStr);
         myStr = ga.getAna(ga.getURL(myStr));
         System.out.println("Anagram generated: "+myStr);
     }
