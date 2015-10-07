@@ -53,17 +53,18 @@ public class ReadString
            System.err.println("Something went wrong trying to read URL");
        }
        BufferedReader in = null;
+       boolean foundLine = false;
        try
        {
            in = new BufferedReader(new InputStreamReader(url.openStream()));
            String myLine;
            String word = ("class=\"vcard\"");
-           while((myLine = in.readLine()) != null)
+           while(((myLine = in.readLine()) != null) && (foundLine == false))
            {
                if ( myLine.contains(word)) 
                {
                     myString = myLine;
-                    myLine = null;
+                    foundLine = true;
                     //System.out.println("Found line: " + myString); - to test the correct line is found
                }
            }
@@ -90,7 +91,8 @@ public class ReadString
             p2 = myString.lastIndexOf(">",  p2 -1);
         }
         /**
-         * This find the 3rd ">" from the right from the position of "class = "vcard"" as there is <div><div> between this and the name
+         * This find the 3rd ">" from the right from the position of "class = "vcard"" as 
+         * there is a "<div><div>" between this and the name
          */
         //System.out.println(myString.substring(p2, p2+10)); - to test the 3rd ">" is found correctly
         p3 = myString.indexOf("<", p2);
