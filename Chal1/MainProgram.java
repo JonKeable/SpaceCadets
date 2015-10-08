@@ -13,7 +13,6 @@ public class MainProgram
     public static void main(String[] args)
     {
        String myString = null;
-       Boolean correctInput = false;
        ReadString br = new ReadString();
        myString = br.readStringCmd();
        System.out.println("You entered the ID: " + myString);

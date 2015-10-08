@@ -10,7 +10,7 @@ public class ReadString
 {
     public String readStringCmd()
     /** 
-    * This class reads string from a users command line input.
+    * This method reads string from a users command line input.
     */
     {
         // put your code here
@@ -30,7 +30,7 @@ public class ReadString
     }
     public String IDtoURL(String myString)
     /**
-     * This class converts a sotonID to its ecs people adress.
+     * This method converts a sotonID to its ecs people adress.
      */
     {
         System.out.println("Looking up URL for soton ID: " + myString);
@@ -39,7 +39,7 @@ public class ReadString
     }
     public String findLine(String myString)
     /**
-     * This class finds the line in the webpage where the name of the ID holder is stored.
+     * This method finds the line in the webpage where the name of the ID holder is stored.
      */
     {
        System.out.println("Searching Webpage: " + myString);
@@ -77,7 +77,7 @@ public class ReadString
     }
     public String findName(String myString)
     /**
-     * This class finds the exact name of the ID holder from the relevant line of the webpage
+     * This method finds the exact name of the ID holder from the relevant line of the webpage
      */
     {
         String subStr; 
@@ -99,7 +99,6 @@ public class ReadString
         //System.out.println(myString.substring(p3, p3+10)); - to test the "<" is found correctly
         subStr = myString.substring(p2+1,p3);
         //System.out.println("Found Substring: " + subStr); - to test substring is correct
-        //myString = subStr.substring((p1+1),p2);
         return subStr;
     }
 }
